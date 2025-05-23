@@ -8,7 +8,7 @@ package Clases;
  *
  * @author Usuario
  */
-public class AckermannPrimitivo {
+public class AckermannR {
     private int _value;
     
     public int ackermannPrimitivo(int m, int n){

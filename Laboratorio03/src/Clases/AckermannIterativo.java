@@ -13,7 +13,7 @@ import java.util.Stack;
 public class AckermannIterativo {
     
     // Usamos pilas para simular al algoritmo recursivo y obtener un algoritmo iterativo.
-    public long ackermannIterative(int m, int n) {
+    public int ackermannIterativo(int m, int n) {
         if (m < 0 || n < 0) {
             throw new IllegalArgumentException("m y n deben ser no negativos.");
         }
@@ -22,7 +22,7 @@ public class AckermannIterativo {
         stack.push(m);
         
         // Valor actual de n. Cuando la pila este vacia, n será el resultado final.
-        long nActual = n;
+        int nActual = n;
 
         while (!stack.isEmpty()) {
             int mActual = stack.pop();
@@ -37,7 +37,6 @@ public class AckermannIterativo {
                 nActual = 1;
             } else {
                 // Caso A(m, n) = A(m-1, A(m, n-1)) donde m > 0, n > 0
-                
                 stack.push(mActual - 1);
                 stack.push(mActual);
                 nActual = nActual - 1;

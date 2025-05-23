@@ -15,7 +15,7 @@ public class Principal {
         int m = 1,n = 2;
         
         
-        AckermannPrimitivo ack = new AckermannPrimitivo();
+        AckermannR ack = new AckermannR();
         System.out.println("Algoritmo recursivo Ackermann-Peter");
         long tInicial = System.currentTimeMillis();
         System.out.println("Resultado para los valores de "+m+" y "+n+": "+ ack.ackermannPrimitivo(m, n));
@@ -27,7 +27,7 @@ public class Principal {
         AckermannIterativo ackIte = new AckermannIterativo();
         System.out.println("\n\n\nAlgoritmo iterativo de Ackermann-Peter");
         long t2Inicial = System.currentTimeMillis();
-        System.out.println("Resultado para los valores de "+m+" y "+n+": "+ ackIte.ackermannIterative(m, n));
+        System.out.println("Resultado para los valores de "+m+" y "+n+": "+ ackIte.ackermannIterativo(m, n));
         long t2Final = System.currentTimeMillis();
         double t2Transcurrido = (t2Final - t2Inicial)/1000.0;
         System.out.println("Tiempo transcurrido: "+ t2Transcurrido);
